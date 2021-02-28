@@ -1,0 +1,22 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.main-container{
+
+    background-image: url("../assets/img/frame.jpg");
+    width: 956px;
+    height: 887px;
+
+    padding-top:15px;
+    padding-left: 30px;
+
+    
+}
