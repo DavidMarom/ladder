@@ -1,22 +1,32 @@
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+p{
+    margin:0px;
+}
+
+body {
     margin: 0px;
     background-color: #000000;
     color: #ffffff;
     font-family: 'Orbitron', sans-serif;
 }
 
-.main-container{
-
+.main-container {
     background-image: url("../assets/img/frame.jpg");
     width: 956px;
     height: 887px;
-
-    padding-top:15px;
+    padding-top: 15px;
     padding-left: 30px;
+}
 
-    
+.title {
+    background-image: url("../assets/img/title.png");
+    width: 233px;
+    height: 46px;
+    padding-top: 13px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
