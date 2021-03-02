@@ -1,15 +1,29 @@
 let aaa = document.querySelector('.area-01');
 
 function onLoad() {
-    title('This is my title');
-    title('This is the second line');
+    titleBox('Progress');
 
     box([
-        ['aaaa', 3, 4],
-        ['bbbb', 0, 1]
+        ['Complete 5 lessons', 3, 5],
+        ['Do homework', 2, 3],
+        ['Subscribe to our Youtube channel', 0, 1]
+
     ]);
 
 }
+
+function titleBox(string){
+
+    aaa.innerHTML+=`
+    
+    <div class="title">
+    <p>${string}</p>
+    </div>
+    
+    `
+
+}
+
 
 function title(title) {
     aaa.innerHTML += `
@@ -18,23 +32,18 @@ function title(title) {
 }
 
 function box(content) {
-    let temp = content[0];
-    let temp2 = content[1];
 
     aaa.innerHTML += `<div class="box-01"></div>`;
-
     let bbb = document.querySelector('.box-01');
-    bbb.innerHTML += `
-        <div class="strip">
-        <p>${temp[0]}</p>
-        <p>${temp[1]}/${temp[2]}</p>
-        </div>
-        
-        
-`;
 
-
-
-
+    for (let i = 0; i < content.length; i++) {
+        let temp = content[i];
+        bbb.innerHTML += `
+            <div class="strip">
+            <p>${temp[0]}</p>
+            <p>${temp[1]}/${temp[2]}</p>
+            </div>
+    `;
+    }
 }
 
