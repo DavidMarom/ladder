@@ -1,29 +1,63 @@
 let aaa = document.querySelector('.area-01');
 
 function onLoad() {
-    titleBox('Progress');
 
-    box([
-        ['Complete 5 lessons', 3, 5],
-        ['Do homework', 2, 3],
-        ['Subscribe to our Youtube channel', 0, 1]
+    getContent();
 
-    ]);
+
+
+    // box([
+    //     ['Complete 5 lessons', 3, 5],
+    //     ['Do homework', 2, 3],
+    //     ['Subscribe to our Youtube channel', 0, 1]
+
+    // ]);
 
 }
 
-function titleBox(string){
+function getContent() {
 
-    aaa.innerHTML+=`
-    
+    let title = '';
+    let content = [];
+    let tempA = '';
+    let tempB = '';
+    let tempC = '';
+
+    title = prompt('Enter title');
+    titleBox(title);
+
+
+    while (tempA != 'stop') {
+
+        tempA = prompt('Enter item: ');
+        if (tempA === 'stop'){break}
+        tempB = prompt('Items done: ');
+        if (tempB === 'stop'){break}
+        tempC = prompt('Items total: ');
+        if (tempC === 'stop'){break}
+
+        content.push([tempA, tempB, tempC]);
+
+    }
+
+
+    box(content);
+
+
+
+
+
+}
+
+
+
+function titleBox(string) {
+    aaa.innerHTML += `
     <div class="title">
     <p>${string}</p>
     </div>
-    
     `
-
 }
-
 
 function title(title) {
     aaa.innerHTML += `
