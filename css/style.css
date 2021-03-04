@@ -54,3 +54,25 @@ body {
     margin-bottom: 12px;
 
 }
+
+
+/* unvisited link */
+a:link {
+    color: #ffffff;
+  }
+  
+  /* visited link */
+  a:visited {
+    color:  #ffffff;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color:  #ffffffd;
+  }
+  
+  /* selected link */
+  a:active {
+    color:  #ffffff;
+  }
+  

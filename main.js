@@ -1,78 +1,49 @@
-let aaa = document.querySelector('.area-01');
-
-function onLoad() {
-
-    getContent();
-
-
-
-    // box([
-    //     ['Complete 5 lessons', 3, 5],
-    //     ['Do homework', 2, 3],
-    //     ['Subscribe to our Youtube channel', 0, 1]
-
-    // ]);
-
-}
+// function addToContainer(el) {
+//     document.querySelector('.main-container').innerHTML += `${el}`;
+// }
 
 function getContent() {
+    addTitleBox(prompt('Enter Title'));
 
-    let title = '';
     let content = [];
     let tempA = '';
     let tempB = '';
     let tempC = '';
 
-    title = prompt('Enter title');
-    titleBox(title);
-
-
-    while (tempA != 'stop') {
-
-        tempA = prompt('Enter item: ');
-        if (tempA === 'stop'){break}
-        tempB = prompt('Items done: ');
-        if (tempB === 'stop'){break}
+    while (true) {
+        tempA = prompt('Enter Item: ');
+        tempB = prompt('How many are done? ');
         tempC = prompt('Items total: ');
-        if (tempC === 'stop'){break}
-
         content.push([tempA, tempB, tempC]);
 
+        if (!confirm('Add another item?')) { break }
     }
+    addBox(content);
 
-
-    box(content);
-
-
-
-
+    document.querySelector('button').remove();
 
 }
 
-
-
-function titleBox(string) {
-    aaa.innerHTML += `
+function addTitleBox(string) {
+    document.querySelector('.main-container').innerHTML += `
     <div class="title">
     <p>${string}</p>
     </div>
     `
 }
 
-function title(title) {
+function addRegulartitle(title) {
     aaa.innerHTML += `
     <h1>${title}</h1>
     `;
 }
 
-function box(content) {
-
-    aaa.innerHTML += `<div class="box-01"></div>`;
-    let bbb = document.querySelector('.box-01');
-
+function addBox(content) {
+    document.querySelector('.main-container').innerHTML += `<div class="box-01"></div>`;
+    let ccc = document.querySelector('.box-01');
     for (let i = 0; i < content.length; i++) {
         let temp = content[i];
-        bbb.innerHTML += `
+        ccc.innerHTML += `
             <div class="strip">
             <p>${temp[0]}</p>
             <p>${temp[1]}/${temp[2]}</p>
@@ -80,4 +51,3 @@ function box(content) {
     `;
     }
 }
-
