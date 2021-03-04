@@ -2,8 +2,8 @@
     box-sizing: border-box;
 }
 
-p{
-    margin:0px;
+p {
+    margin: 0px;
 }
 
 body {
@@ -45,34 +45,34 @@ body {
     justify-content: flex-start;
 }
 
-.strip{
+.strip {
     font-size: 12px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
     margin-bottom: 12px;
-
 }
 
-
 /* unvisited link */
+
 a:link {
     color: #ffffff;
-  }
-  
-  /* visited link */
-  a:visited {
-    color:  #ffffff;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color:  #ffffffd;
-  }
-  
-  /* selected link */
-  a:active {
-    color:  #ffffff;
-  }
-  
+}
+
+/* visited link */
+
+a:visited {
+    color: #ffffff;
+}
+
+/* mouse over link */
+
+a:hover {
+    color: #ffffff;
+}
+
+/* selected link */
+
+a:active {
+    color: #ffffff;
+}
